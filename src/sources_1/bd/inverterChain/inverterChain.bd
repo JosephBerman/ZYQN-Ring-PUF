@@ -1,0 +1,389 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6B5252346B525234",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../ringPUF.gen/sources_1/bd/inverterChain",
+      "name": "inverterChain",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "invert9_0": {
+        "invert3_1": {
+          "inverter_0": "",
+          "inverter_1": "",
+          "inverter_2": ""
+        },
+        "invert3_3": {
+          "inverter_0": "",
+          "inverter_1": "",
+          "inverter_2": ""
+        },
+        "invert3_2": {
+          "inverter_0": "",
+          "inverter_1": "",
+          "inverter_2": ""
+        }
+      }
+    },
+    "ports": {
+      "a": {
+        "direction": "I"
+      },
+      "x": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "invert9_0": {
+        "ports": {
+          "x": {
+            "direction": "O"
+          },
+          "a": {
+            "direction": "I"
+          }
+        },
+        "components": {
+          "invert3_1": {
+            "ports": {
+              "a": {
+                "direction": "I"
+              },
+              "x": {
+                "direction": "O"
+              }
+            },
+            "components": {
+              "inverter_0": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_0_17",
+                "xci_path": "ip\\inverterChain_inverter_0_17\\inverterChain_inverter_0_17.xci",
+                "inst_hier_path": "invert9_0/invert3_1/inverter_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_1": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_1_4",
+                "xci_path": "ip\\inverterChain_inverter_1_4\\inverterChain_inverter_1_4.xci",
+                "inst_hier_path": "invert9_0/invert3_1/inverter_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_2": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_2_3",
+                "xci_path": "ip\\inverterChain_inverter_2_3\\inverterChain_inverter_2_3.xci",
+                "inst_hier_path": "invert9_0/invert3_1/inverter_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "a_1": {
+                "ports": [
+                  "a",
+                  "inverter_0/a"
+                ]
+              },
+              "inverter_0_x": {
+                "ports": [
+                  "inverter_0/x",
+                  "inverter_1/a"
+                ]
+              },
+              "inverter_1_x": {
+                "ports": [
+                  "inverter_1/x",
+                  "inverter_2/a"
+                ]
+              },
+              "inverter_2_x": {
+                "ports": [
+                  "inverter_2/x",
+                  "x"
+                ]
+              }
+            }
+          },
+          "invert3_3": {
+            "ports": {
+              "a": {
+                "direction": "I"
+              },
+              "x": {
+                "direction": "O"
+              }
+            },
+            "components": {
+              "inverter_0": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_0_27",
+                "xci_path": "ip\\inverterChain_inverter_0_27\\inverterChain_inverter_0_27.xci",
+                "inst_hier_path": "invert9_0/invert3_3/inverter_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_1": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_1_14",
+                "xci_path": "ip\\inverterChain_inverter_1_14\\inverterChain_inverter_1_14.xci",
+                "inst_hier_path": "invert9_0/invert3_3/inverter_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_2": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_2_13",
+                "xci_path": "ip\\inverterChain_inverter_2_13\\inverterChain_inverter_2_13.xci",
+                "inst_hier_path": "invert9_0/invert3_3/inverter_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "a_1": {
+                "ports": [
+                  "a",
+                  "inverter_0/a"
+                ]
+              },
+              "inverter_0_x": {
+                "ports": [
+                  "inverter_0/x",
+                  "inverter_1/a"
+                ]
+              },
+              "inverter_1_x": {
+                "ports": [
+                  "inverter_1/x",
+                  "inverter_2/a"
+                ]
+              },
+              "inverter_2_x": {
+                "ports": [
+                  "inverter_2/x",
+                  "x"
+                ]
+              }
+            }
+          },
+          "invert3_2": {
+            "ports": {
+              "a": {
+                "direction": "I"
+              },
+              "x": {
+                "direction": "O"
+              }
+            },
+            "components": {
+              "inverter_0": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_0_26",
+                "xci_path": "ip\\inverterChain_inverter_0_26\\inverterChain_inverter_0_26.xci",
+                "inst_hier_path": "invert9_0/invert3_2/inverter_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_1": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_1_13",
+                "xci_path": "ip\\inverterChain_inverter_1_13\\inverterChain_inverter_1_13.xci",
+                "inst_hier_path": "invert9_0/invert3_2/inverter_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_2": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "inverterChain_inverter_2_12",
+                "xci_path": "ip\\inverterChain_inverter_2_12\\inverterChain_inverter_2_12.xci",
+                "inst_hier_path": "invert9_0/invert3_2/inverter_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "a_1": {
+                "ports": [
+                  "a",
+                  "inverter_0/a"
+                ]
+              },
+              "inverter_0_x": {
+                "ports": [
+                  "inverter_0/x",
+                  "inverter_1/a"
+                ]
+              },
+              "inverter_1_x": {
+                "ports": [
+                  "inverter_1/x",
+                  "inverter_2/a"
+                ]
+              },
+              "inverter_2_x": {
+                "ports": [
+                  "inverter_2/x",
+                  "x"
+                ]
+              }
+            }
+          }
+        },
+        "nets": {
+          "a_1": {
+            "ports": [
+              "a",
+              "invert3_1/a"
+            ]
+          },
+          "invert3_1_x": {
+            "ports": [
+              "invert3_1/x",
+              "invert3_2/a"
+            ]
+          },
+          "invert3_2_x": {
+            "ports": [
+              "invert3_2/x",
+              "invert3_3/a"
+            ]
+          },
+          "invert3_3_x": {
+            "ports": [
+              "invert3_3/x",
+              "x"
+            ]
+          }
+        }
+      }
+    },
+    "nets": {
+      "a_1": {
+        "ports": [
+          "a",
+          "invert9_0/a"
+        ]
+      },
+      "invert9_0_x": {
+        "ports": [
+          "invert9_0/x",
+          "x"
+        ]
+      }
+    }
+  }
+}

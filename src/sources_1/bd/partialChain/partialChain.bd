@@ -1,0 +1,119 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6B5252346B525234",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../ringPUF.gen/sources_1/bd/partialChain",
+      "name": "partialChain",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "inverterChain_0": "",
+      "pufNAND_0": ""
+    },
+    "ports": {
+      "x": {
+        "direction": "O"
+      },
+      "a": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "inverterChain_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "inverterChain.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "inverterChain.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "inverterChain.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "inverterChain.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "inverterChain.bd",
+            "value_src": "auto"
+          }
+        },
+        "ports": {
+          "a": {
+            "direction": "I"
+          },
+          "x": {
+            "direction": "O"
+          }
+        },
+        "post_compiled_compname": "inverterChain_inst_0",
+        "architecture": "zynq",
+        "variant_info": {
+          "inverterChain.bd": {
+            "scoped_diagram": "inverterChain_inst_0.bd",
+            "design_checksum": "0xFE79A9DA6B525234",
+            "ref_name": "inverterChain",
+            "ref_subinst_path": "partialChain_inverterChain_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "pufNAND_0": {
+        "vlnv": "xilinx.com:module_ref:pufNAND:1.0",
+        "ip_revision": "1",
+        "xci_name": "partialChain_pufNAND_0_0",
+        "xci_path": "ip\\partialChain_pufNAND_0_0\\partialChain_pufNAND_0_0.xci",
+        "inst_hier_path": "pufNAND_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pufNAND",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I"
+          },
+          "b": {
+            "direction": "I"
+          },
+          "x": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "a_1": {
+        "ports": [
+          "a",
+          "pufNAND_0/a"
+        ]
+      },
+      "inverterChain_0_x": {
+        "ports": [
+          "inverterChain_0/x",
+          "x",
+          "pufNAND_0/b"
+        ]
+      },
+      "pufNAND_0_x": {
+        "ports": [
+          "pufNAND_0/x",
+          "inverterChain_0/a"
+        ]
+      }
+    }
+  }
+}

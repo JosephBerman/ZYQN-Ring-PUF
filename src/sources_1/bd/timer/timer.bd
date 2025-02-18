@@ -1,0 +1,196 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA5637BEB3A1958CE",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../ringPUF.gen/sources_1/bd/timer",
+      "name": "timer",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "c_counter_binary_0": "",
+      "timer_logic_0": ""
+    },
+    "ports": {
+      "time_stop": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "timer_out": {
+        "type": "data",
+        "direction": "O",
+        "left": "3",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": [
+              "xilinx.com:interface:datatypes:1.0 {",
+              "DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum",
+              "{} maximum {}} value 4} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool",
+              "minimum {} maximum {}} value false}}}} DATA_WIDTH 4",
+              "}"
+            ],
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "timer_clk": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "timer_counter_clr": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "timer_enable": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "c_counter_binary_0": {
+        "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
+        "ip_revision": "20",
+        "xci_name": "timer_c_counter_binary_0_0",
+        "xci_path": "ip\\timer_c_counter_binary_0_0\\timer_c_counter_binary_0_0.xci",
+        "inst_hier_path": "c_counter_binary_0",
+        "parameters": {
+          "CE": {
+            "value": "true"
+          },
+          "Fb_Latency_Configuration": {
+            "value": "Automatic"
+          },
+          "Final_Count_Value": {
+            "value": "E"
+          },
+          "Implementation": {
+            "value": "DSP48"
+          },
+          "Latency_Configuration": {
+            "value": "Automatic"
+          },
+          "Load_Sense": {
+            "value": "Active_High"
+          },
+          "Output_Width": {
+            "value": "4"
+          },
+          "Restrict_Count": {
+            "value": "true"
+          },
+          "SCLR": {
+            "value": "true"
+          },
+          "Sync_CE_Priority": {
+            "value": "Sync_Overrides_CE"
+          },
+          "Sync_Threshold_Output": {
+            "value": "true"
+          }
+        }
+      },
+      "timer_logic_0": {
+        "vlnv": "xilinx.com:module_ref:timer_logic:1.0",
+        "ip_revision": "1",
+        "xci_name": "timer_timer_logic_0_0",
+        "xci_path": "ip\\timer_timer_logic_0_0\\timer_timer_logic_0_0.xci",
+        "inst_hier_path": "timer_logic_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "timer_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CE_in": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "time_stop": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "CE_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "CE_1": {
+        "ports": [
+          "timer_enable",
+          "timer_logic_0/CE_in"
+        ]
+      },
+      "CLK_1": {
+        "ports": [
+          "timer_clk",
+          "c_counter_binary_0/CLK"
+        ]
+      },
+      "SCLR_1": {
+        "ports": [
+          "timer_counter_clr",
+          "c_counter_binary_0/SCLR"
+        ]
+      },
+      "c_counter_binary_0_Q": {
+        "ports": [
+          "c_counter_binary_0/Q",
+          "timer_out"
+        ]
+      },
+      "c_counter_binary_0_THRESH0": {
+        "ports": [
+          "c_counter_binary_0/THRESH0",
+          "time_stop",
+          "timer_logic_0/time_stop"
+        ]
+      },
+      "timer_logic_0_CE_out": {
+        "ports": [
+          "timer_logic_0/CE_out",
+          "c_counter_binary_0/CE"
+        ]
+      }
+    }
+  }
+}

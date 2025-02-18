@@ -1,0 +1,363 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x445EE0B0D648811E",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../ringPUF.gen/sources_1/bd/ringPUF",
+      "name": "ringPUF",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "fullChain_wrapper_0": "",
+      "fullChain_wrapper_1": "",
+      "compare_counter_0": "",
+      "timer_wrapper_0": "",
+      "clk_wiz_0": "",
+      "timer_logic_0": ""
+    },
+    "ports": {
+      "random_out": {
+        "direction": "O"
+      },
+      "sys_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "ringPUF_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      },
+      "mux_enable": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "puf_enable": {
+        "direction": "I"
+      },
+      "timer_counter_clr": {
+        "direction": "I"
+      },
+      "timer_out": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "sys_clk_rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "time_stop": {
+        "direction": "O"
+      },
+      "reset_counter": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "fullChain_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:fullChain_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "ringPUF_fullChain_wrapper_0_0",
+        "xci_path": "ip\\ringPUF_fullChain_wrapper_0_0\\ringPUF_fullChain_wrapper_0_0.xci",
+        "inst_hier_path": "fullChain_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fullChain_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "count_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "mux_enable": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "puf_enable": {
+            "direction": "I"
+          },
+          "reset_counter": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "fullChain_wrapper_1": {
+        "vlnv": "xilinx.com:module_ref:fullChain_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "ringPUF_fullChain_wrapper_0_1",
+        "xci_path": "ip\\ringPUF_fullChain_wrapper_0_1\\ringPUF_fullChain_wrapper_0_1.xci",
+        "inst_hier_path": "fullChain_wrapper_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fullChain_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "count_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "mux_enable": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "puf_enable": {
+            "direction": "I"
+          },
+          "reset_counter": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "compare_counter_0": {
+        "vlnv": "xilinx.com:module_ref:compare_counter:1.0",
+        "ip_revision": "1",
+        "xci_name": "ringPUF_compare_counter_0_0",
+        "xci_path": "ip\\ringPUF_compare_counter_0_0\\ringPUF_compare_counter_0_0.xci",
+        "inst_hier_path": "compare_counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "compare_counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "count_a": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "count_b": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "x": {
+            "direction": "O"
+          }
+        }
+      },
+      "timer_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:timer_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "ringPUF_timer_wrapper_0_0",
+        "xci_path": "ip\\ringPUF_timer_wrapper_0_0\\ringPUF_timer_wrapper_0_0.xci",
+        "inst_hier_path": "timer_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "timer_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "time_stop": {
+            "direction": "O"
+          },
+          "timer_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "timer_counter_clr": {
+            "direction": "I"
+          },
+          "timer_enable": {
+            "direction": "I"
+          },
+          "timer_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "15",
+        "xci_name": "ringPUF_clk_wiz_0_0",
+        "xci_path": "ip\\ringPUF_clk_wiz_0_0\\ringPUF_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_POWER_DOWN": {
+            "value": "false"
+          }
+        }
+      },
+      "timer_logic_0": {
+        "vlnv": "xilinx.com:module_ref:timer_logic:1.0",
+        "ip_revision": "1",
+        "xci_name": "ringPUF_timer_logic_0_0",
+        "xci_path": "ip\\ringPUF_timer_logic_0_0\\ringPUF_timer_logic_0_0.xci",
+        "inst_hier_path": "timer_logic_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "timer_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CE_in": {
+            "direction": "I"
+          },
+          "time_stop": {
+            "direction": "I"
+          },
+          "CE_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "reset_counter",
+          "fullChain_wrapper_0/reset_counter",
+          "fullChain_wrapper_1/reset_counter"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "timer_logic_0/CE_out",
+          "fullChain_wrapper_1/puf_enable",
+          "fullChain_wrapper_0/puf_enable",
+          "timer_wrapper_0/timer_enable"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "timer_wrapper_0/timer_clk"
+        ]
+      },
+      "compare_counter_0_x": {
+        "ports": [
+          "compare_counter_0/x",
+          "random_out"
+        ]
+      },
+      "fullChain_wrapper_0_count_out": {
+        "ports": [
+          "fullChain_wrapper_0/count_out",
+          "compare_counter_0/count_a"
+        ]
+      },
+      "fullChain_wrapper_1_count_out": {
+        "ports": [
+          "fullChain_wrapper_1/count_out",
+          "compare_counter_0/count_b"
+        ]
+      },
+      "mux_enable_1": {
+        "ports": [
+          "mux_enable",
+          "fullChain_wrapper_0/mux_enable",
+          "fullChain_wrapper_1/mux_enable"
+        ]
+      },
+      "puf_enable_1": {
+        "ports": [
+          "puf_enable",
+          "timer_logic_0/CE_in"
+        ]
+      },
+      "sys_clk_rst_1": {
+        "ports": [
+          "sys_clk_rst",
+          "clk_wiz_0/reset"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "timer_counter_clr_1": {
+        "ports": [
+          "timer_counter_clr",
+          "timer_wrapper_0/timer_counter_clr"
+        ]
+      },
+      "timer_wrapper_0_time_stop": {
+        "ports": [
+          "timer_wrapper_0/time_stop",
+          "compare_counter_0/enable",
+          "timer_logic_0/time_stop",
+          "time_stop"
+        ]
+      },
+      "timer_wrapper_0_timer_out": {
+        "ports": [
+          "timer_wrapper_0/timer_out",
+          "timer_out"
+        ]
+      }
+    }
+  }
+}

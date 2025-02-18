@@ -1,0 +1,1480 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE49073CC85BCAD96",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../ringPUF.gen/sources_1/bd/fullChain",
+      "name": "fullChain",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "partialChain": {
+        "invert9_0": {
+          "inverter_0": "",
+          "inverter_1": "",
+          "inverter_2": "",
+          "inverter_5": "",
+          "inverter_4": "",
+          "inverter_3": "",
+          "inverter_7": "",
+          "inverter_8": "",
+          "inverter_6": ""
+        },
+        "pufAND_0": ""
+      },
+      "partialChain1": {
+        "invert9_0": {
+          "inverter_0": "",
+          "inverter_1": "",
+          "inverter_2": "",
+          "inverter_5": "",
+          "inverter_4": "",
+          "inverter_3": "",
+          "inverter_7": "",
+          "inverter_8": "",
+          "inverter_6": ""
+        },
+        "pufAND_0": ""
+      },
+      "partialChain2": {
+        "invert9_0": {
+          "inverter_0": "",
+          "inverter_1": "",
+          "inverter_2": "",
+          "inverter_5": "",
+          "inverter_4": "",
+          "inverter_3": "",
+          "inverter_7": "",
+          "inverter_8": "",
+          "inverter_6": ""
+        },
+        "pufAND_0": ""
+      },
+      "partialChain3": {
+        "invert9_0": {
+          "inverter_0": "",
+          "inverter_1": "",
+          "inverter_2": "",
+          "inverter_5": "",
+          "inverter_4": "",
+          "inverter_3": "",
+          "inverter_7": "",
+          "inverter_8": "",
+          "inverter_6": ""
+        },
+        "pufAND_0": ""
+      },
+      "c_counter_binary_0": "",
+      "mux4x1_0": ""
+    },
+    "ports": {
+      "puf_enable": {
+        "direction": "I"
+      },
+      "count_out": {
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": [
+              "xilinx.com:interface:datatypes:1.0 {",
+              "DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum",
+              "{} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool",
+              "minimum {} maximum {}} value false}}}} DATA_WIDTH 32",
+              "}"
+            ],
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "reset_counter": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "mux_enable": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      }
+    },
+    "components": {
+      "partialChain": {
+        "ports": {
+          "x": {
+            "direction": "O"
+          },
+          "puf_enable": {
+            "direction": "I"
+          }
+        },
+        "components": {
+          "invert9_0": {
+            "ports": {
+              "x": {
+                "direction": "O"
+              },
+              "a": {
+                "direction": "I"
+              }
+            },
+            "components": {
+              "inverter_0": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_0_0",
+                "xci_path": "ip\\fullChain_inverter_0_0\\fullChain_inverter_0_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_1": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_9_0",
+                "xci_path": "ip\\fullChain_inverter_9_0\\fullChain_inverter_9_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_2": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_6_0",
+                "xci_path": "ip\\fullChain_inverter_6_0\\fullChain_inverter_6_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_5": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_7_0",
+                "xci_path": "ip\\fullChain_inverter_7_0\\fullChain_inverter_7_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_5",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_4": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_5_0",
+                "xci_path": "ip\\fullChain_inverter_5_0\\fullChain_inverter_5_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_4",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_3": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_3_0",
+                "xci_path": "ip\\fullChain_inverter_3_0\\fullChain_inverter_3_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_3",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_7": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_4_0",
+                "xci_path": "ip\\fullChain_inverter_4_0\\fullChain_inverter_4_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_7",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_8": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_2_0",
+                "xci_path": "ip\\fullChain_inverter_2_0\\fullChain_inverter_2_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_8",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_6": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_8_0",
+                "xci_path": "ip\\fullChain_inverter_8_0\\fullChain_inverter_8_0.xci",
+                "inst_hier_path": "partialChain/invert9_0/inverter_6",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "a_1": {
+                "ports": [
+                  "a",
+                  "inverter_0/a"
+                ]
+              },
+              "inverter_0_x": {
+                "ports": [
+                  "inverter_0/x",
+                  "inverter_1/a"
+                ]
+              },
+              "inverter_2_x": {
+                "ports": [
+                  "inverter_8/x",
+                  "x"
+                ]
+              },
+              "inverter_3_x": {
+                "ports": [
+                  "inverter_3/x",
+                  "inverter_4/a"
+                ]
+              },
+              "inverter_5_x": {
+                "ports": [
+                  "inverter_4/x",
+                  "inverter_5/a"
+                ]
+              },
+              "inverter_6_x": {
+                "ports": [
+                  "inverter_2/x",
+                  "inverter_3/a"
+                ]
+              },
+              "inverter_7_x": {
+                "ports": [
+                  "inverter_5/x",
+                  "inverter_6/a"
+                ]
+              },
+              "inverter_7_x1": {
+                "ports": [
+                  "inverter_7/x",
+                  "inverter_8/a"
+                ]
+              },
+              "inverter_8_x": {
+                "ports": [
+                  "inverter_6/x",
+                  "inverter_7/a"
+                ]
+              },
+              "inverter_9_x": {
+                "ports": [
+                  "inverter_1/x",
+                  "inverter_2/a"
+                ]
+              }
+            }
+          },
+          "pufAND_0": {
+            "vlnv": "xilinx.com:module_ref:pufAND:1.0",
+            "ip_revision": "1",
+            "xci_name": "fullChain_pufAND_0_0",
+            "xci_path": "ip\\fullChain_pufAND_0_0\\fullChain_pufAND_0_0.xci",
+            "inst_hier_path": "partialChain/pufAND_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "pufAND",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "a": {
+                "direction": "I"
+              },
+              "b": {
+                "direction": "I"
+              },
+              "x": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "invert9_0_x": {
+            "ports": [
+              "invert9_0/x",
+              "x",
+              "pufAND_0/b"
+            ]
+          },
+          "pufAND_0_x": {
+            "ports": [
+              "pufAND_0/x",
+              "invert9_0/a"
+            ]
+          },
+          "puf_CLK_1": {
+            "ports": [
+              "puf_enable",
+              "pufAND_0/a"
+            ]
+          }
+        }
+      },
+      "partialChain1": {
+        "ports": {
+          "x": {
+            "direction": "O"
+          },
+          "puf_enable": {
+            "direction": "I"
+          }
+        },
+        "components": {
+          "invert9_0": {
+            "ports": {
+              "x": {
+                "direction": "O"
+              },
+              "a": {
+                "direction": "I"
+              }
+            },
+            "components": {
+              "inverter_0": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_0_4",
+                "xci_path": "ip\\fullChain_inverter_0_4\\fullChain_inverter_0_4.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_1": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_1_0",
+                "xci_path": "ip\\fullChain_inverter_1_0\\fullChain_inverter_1_0.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_2": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_2_4",
+                "xci_path": "ip\\fullChain_inverter_2_4\\fullChain_inverter_2_4.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_5": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_5_4",
+                "xci_path": "ip\\fullChain_inverter_5_4\\fullChain_inverter_5_4.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_5",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_4": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_4_4",
+                "xci_path": "ip\\fullChain_inverter_4_4\\fullChain_inverter_4_4.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_4",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_3": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_3_4",
+                "xci_path": "ip\\fullChain_inverter_3_4\\fullChain_inverter_3_4.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_3",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_7": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_7_4",
+                "xci_path": "ip\\fullChain_inverter_7_4\\fullChain_inverter_7_4.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_7",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_8": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_8_4",
+                "xci_path": "ip\\fullChain_inverter_8_4\\fullChain_inverter_8_4.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_8",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_6": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_6_4",
+                "xci_path": "ip\\fullChain_inverter_6_4\\fullChain_inverter_6_4.xci",
+                "inst_hier_path": "partialChain1/invert9_0/inverter_6",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "a_1": {
+                "ports": [
+                  "a",
+                  "inverter_0/a"
+                ]
+              },
+              "inverter_0_x": {
+                "ports": [
+                  "inverter_0/x",
+                  "inverter_1/a"
+                ]
+              },
+              "inverter_2_x": {
+                "ports": [
+                  "inverter_8/x",
+                  "x"
+                ]
+              },
+              "inverter_3_x": {
+                "ports": [
+                  "inverter_3/x",
+                  "inverter_4/a"
+                ]
+              },
+              "inverter_4_x": {
+                "ports": [
+                  "inverter_7/x",
+                  "inverter_8/a"
+                ]
+              },
+              "inverter_5_x": {
+                "ports": [
+                  "inverter_4/x",
+                  "inverter_5/a"
+                ]
+              },
+              "inverter_6_x": {
+                "ports": [
+                  "inverter_2/x",
+                  "inverter_3/a"
+                ]
+              },
+              "inverter_7_x": {
+                "ports": [
+                  "inverter_5/x",
+                  "inverter_6/a"
+                ]
+              },
+              "inverter_8_x": {
+                "ports": [
+                  "inverter_6/x",
+                  "inverter_7/a"
+                ]
+              },
+              "inverter_9_x": {
+                "ports": [
+                  "inverter_1/x",
+                  "inverter_2/a"
+                ]
+              }
+            }
+          },
+          "pufAND_0": {
+            "vlnv": "xilinx.com:module_ref:pufAND:1.0",
+            "ip_revision": "1",
+            "xci_name": "fullChain_pufAND_0_1",
+            "xci_path": "ip\\fullChain_pufAND_0_1\\fullChain_pufAND_0_1.xci",
+            "inst_hier_path": "partialChain1/pufAND_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "pufAND",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "a": {
+                "direction": "I"
+              },
+              "b": {
+                "direction": "I"
+              },
+              "x": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "invert9_0_x": {
+            "ports": [
+              "invert9_0/x",
+              "x",
+              "pufAND_0/b"
+            ]
+          },
+          "pufAND_0_x": {
+            "ports": [
+              "pufAND_0/x",
+              "invert9_0/a"
+            ]
+          },
+          "puf_CLK_1": {
+            "ports": [
+              "puf_enable",
+              "pufAND_0/a"
+            ]
+          }
+        }
+      },
+      "partialChain2": {
+        "ports": {
+          "x": {
+            "direction": "O"
+          },
+          "puf_enable": {
+            "direction": "I"
+          }
+        },
+        "components": {
+          "invert9_0": {
+            "ports": {
+              "x": {
+                "direction": "O"
+              },
+              "a": {
+                "direction": "I"
+              }
+            },
+            "components": {
+              "inverter_0": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_0_5",
+                "xci_path": "ip\\fullChain_inverter_0_5\\fullChain_inverter_0_5.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_1": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_1_1",
+                "xci_path": "ip\\fullChain_inverter_1_1\\fullChain_inverter_1_1.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_2": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_2_5",
+                "xci_path": "ip\\fullChain_inverter_2_5\\fullChain_inverter_2_5.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_5": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_5_5",
+                "xci_path": "ip\\fullChain_inverter_5_5\\fullChain_inverter_5_5.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_5",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_4": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_4_5",
+                "xci_path": "ip\\fullChain_inverter_4_5\\fullChain_inverter_4_5.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_4",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_3": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_3_5",
+                "xci_path": "ip\\fullChain_inverter_3_5\\fullChain_inverter_3_5.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_3",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_7": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_7_5",
+                "xci_path": "ip\\fullChain_inverter_7_5\\fullChain_inverter_7_5.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_7",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_8": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_8_5",
+                "xci_path": "ip\\fullChain_inverter_8_5\\fullChain_inverter_8_5.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_8",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_6": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_6_5",
+                "xci_path": "ip\\fullChain_inverter_6_5\\fullChain_inverter_6_5.xci",
+                "inst_hier_path": "partialChain2/invert9_0/inverter_6",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "a_1": {
+                "ports": [
+                  "a",
+                  "inverter_0/a"
+                ]
+              },
+              "inverter_0_x": {
+                "ports": [
+                  "inverter_0/x",
+                  "inverter_1/a"
+                ]
+              },
+              "inverter_2_x": {
+                "ports": [
+                  "inverter_8/x",
+                  "x"
+                ]
+              },
+              "inverter_3_x": {
+                "ports": [
+                  "inverter_3/x",
+                  "inverter_4/a"
+                ]
+              },
+              "inverter_4_x": {
+                "ports": [
+                  "inverter_7/x",
+                  "inverter_8/a"
+                ]
+              },
+              "inverter_5_x": {
+                "ports": [
+                  "inverter_4/x",
+                  "inverter_5/a"
+                ]
+              },
+              "inverter_6_x": {
+                "ports": [
+                  "inverter_2/x",
+                  "inverter_3/a"
+                ]
+              },
+              "inverter_7_x": {
+                "ports": [
+                  "inverter_5/x",
+                  "inverter_6/a"
+                ]
+              },
+              "inverter_8_x": {
+                "ports": [
+                  "inverter_6/x",
+                  "inverter_7/a"
+                ]
+              },
+              "inverter_9_x": {
+                "ports": [
+                  "inverter_1/x",
+                  "inverter_2/a"
+                ]
+              }
+            }
+          },
+          "pufAND_0": {
+            "vlnv": "xilinx.com:module_ref:pufAND:1.0",
+            "ip_revision": "1",
+            "xci_name": "fullChain_pufAND_0_2",
+            "xci_path": "ip\\fullChain_pufAND_0_2\\fullChain_pufAND_0_2.xci",
+            "inst_hier_path": "partialChain2/pufAND_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "pufAND",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "a": {
+                "direction": "I"
+              },
+              "b": {
+                "direction": "I"
+              },
+              "x": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "a_1": {
+            "ports": [
+              "pufAND_0/x",
+              "invert9_0/a"
+            ]
+          },
+          "invert9_0_x": {
+            "ports": [
+              "invert9_0/x",
+              "x",
+              "pufAND_0/b"
+            ]
+          },
+          "puf_CLK_1": {
+            "ports": [
+              "puf_enable",
+              "pufAND_0/a"
+            ]
+          }
+        }
+      },
+      "partialChain3": {
+        "ports": {
+          "x": {
+            "direction": "O"
+          },
+          "puf_enable": {
+            "direction": "I"
+          }
+        },
+        "components": {
+          "invert9_0": {
+            "ports": {
+              "x": {
+                "direction": "O"
+              },
+              "a": {
+                "direction": "I"
+              }
+            },
+            "components": {
+              "inverter_0": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_0_6",
+                "xci_path": "ip\\fullChain_inverter_0_6\\fullChain_inverter_0_6.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_1": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_1_2",
+                "xci_path": "ip\\fullChain_inverter_1_2\\fullChain_inverter_1_2.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_2": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_2_6",
+                "xci_path": "ip\\fullChain_inverter_2_6\\fullChain_inverter_2_6.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_5": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_5_6",
+                "xci_path": "ip\\fullChain_inverter_5_6\\fullChain_inverter_5_6.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_5",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_4": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_4_6",
+                "xci_path": "ip\\fullChain_inverter_4_6\\fullChain_inverter_4_6.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_4",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_3": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_3_6",
+                "xci_path": "ip\\fullChain_inverter_3_6\\fullChain_inverter_3_6.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_3",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_7": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_7_6",
+                "xci_path": "ip\\fullChain_inverter_7_6\\fullChain_inverter_7_6.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_7",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_8": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_8_6",
+                "xci_path": "ip\\fullChain_inverter_8_6\\fullChain_inverter_8_6.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_8",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "inverter_6": {
+                "vlnv": "xilinx.com:module_ref:inverter:1.0",
+                "ip_revision": "1",
+                "xci_name": "fullChain_inverter_6_6",
+                "xci_path": "ip\\fullChain_inverter_6_6\\fullChain_inverter_6_6.xci",
+                "inst_hier_path": "partialChain3/invert9_0/inverter_6",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "inverter",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "a": {
+                    "direction": "I"
+                  },
+                  "x": {
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "a_1": {
+                "ports": [
+                  "a",
+                  "inverter_0/a"
+                ]
+              },
+              "inverter_0_x": {
+                "ports": [
+                  "inverter_0/x",
+                  "inverter_1/a"
+                ]
+              },
+              "inverter_2_x": {
+                "ports": [
+                  "inverter_8/x",
+                  "x"
+                ]
+              },
+              "inverter_3_x": {
+                "ports": [
+                  "inverter_3/x",
+                  "inverter_4/a"
+                ]
+              },
+              "inverter_4_x": {
+                "ports": [
+                  "inverter_7/x",
+                  "inverter_8/a"
+                ]
+              },
+              "inverter_5_x": {
+                "ports": [
+                  "inverter_4/x",
+                  "inverter_5/a"
+                ]
+              },
+              "inverter_6_x": {
+                "ports": [
+                  "inverter_2/x",
+                  "inverter_3/a"
+                ]
+              },
+              "inverter_7_x": {
+                "ports": [
+                  "inverter_5/x",
+                  "inverter_6/a"
+                ]
+              },
+              "inverter_8_x": {
+                "ports": [
+                  "inverter_6/x",
+                  "inverter_7/a"
+                ]
+              },
+              "inverter_9_x": {
+                "ports": [
+                  "inverter_1/x",
+                  "inverter_2/a"
+                ]
+              }
+            }
+          },
+          "pufAND_0": {
+            "vlnv": "xilinx.com:module_ref:pufAND:1.0",
+            "ip_revision": "1",
+            "xci_name": "fullChain_pufAND_0_3",
+            "xci_path": "ip\\fullChain_pufAND_0_3\\fullChain_pufAND_0_3.xci",
+            "inst_hier_path": "partialChain3/pufAND_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "pufAND",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "a": {
+                "direction": "I"
+              },
+              "b": {
+                "direction": "I"
+              },
+              "x": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "a_1": {
+            "ports": [
+              "pufAND_0/x",
+              "invert9_0/a"
+            ]
+          },
+          "invert9_0_x": {
+            "ports": [
+              "invert9_0/x",
+              "x",
+              "pufAND_0/b"
+            ]
+          },
+          "puf_CLK_1": {
+            "ports": [
+              "puf_enable",
+              "pufAND_0/a"
+            ]
+          }
+        }
+      },
+      "c_counter_binary_0": {
+        "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
+        "ip_revision": "20",
+        "xci_name": "fullChain_c_counter_binary_0_0",
+        "xci_path": "ip\\fullChain_c_counter_binary_0_0\\fullChain_c_counter_binary_0_0.xci",
+        "inst_hier_path": "c_counter_binary_0",
+        "parameters": {
+          "CE": {
+            "value": "true"
+          },
+          "Fb_Latency_Configuration": {
+            "value": "Automatic"
+          },
+          "Implementation": {
+            "value": "DSP48"
+          },
+          "Latency_Configuration": {
+            "value": "Automatic"
+          },
+          "Load": {
+            "value": "false"
+          },
+          "Output_Width": {
+            "value": "32"
+          },
+          "Restrict_Count": {
+            "value": "false"
+          },
+          "SCLR": {
+            "value": "true"
+          }
+        }
+      },
+      "mux4x1_0": {
+        "vlnv": "xilinx.com:module_ref:mux4x1:1.0",
+        "ip_revision": "1",
+        "xci_name": "fullChain_mux4x1_0_0",
+        "xci_path": "ip\\fullChain_mux4x1_0_0\\fullChain_mux4x1_0_0.xci",
+        "inst_hier_path": "mux4x1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux4x1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I"
+          },
+          "b": {
+            "direction": "I"
+          },
+          "c": {
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          },
+          "x": {
+            "direction": "O"
+          },
+          "mux_enable": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "c_counter_binary_0_Q": {
+        "ports": [
+          "c_counter_binary_0/Q",
+          "count_out"
+        ]
+      },
+      "mux4x1_0_x": {
+        "ports": [
+          "mux4x1_0/x",
+          "c_counter_binary_0/CLK"
+        ]
+      },
+      "mux_enable_1": {
+        "ports": [
+          "mux_enable",
+          "mux4x1_0/mux_enable"
+        ]
+      },
+      "partialChain1_x": {
+        "ports": [
+          "partialChain1/x",
+          "mux4x1_0/b"
+        ]
+      },
+      "partialChain2_x": {
+        "ports": [
+          "partialChain2/x",
+          "mux4x1_0/c"
+        ]
+      },
+      "partialChain3_x": {
+        "ports": [
+          "partialChain3/x",
+          "mux4x1_0/d"
+        ]
+      },
+      "partialChain_x": {
+        "ports": [
+          "partialChain/x",
+          "mux4x1_0/a"
+        ]
+      },
+      "puf_CLK_1": {
+        "ports": [
+          "puf_enable",
+          "c_counter_binary_0/CE",
+          "partialChain/puf_enable",
+          "partialChain1/puf_enable",
+          "partialChain2/puf_enable",
+          "partialChain3/puf_enable"
+        ]
+      },
+      "reset_counter_1": {
+        "ports": [
+          "reset_counter",
+          "c_counter_binary_0/SCLR"
+        ]
+      }
+    }
+  }
+}
